@@ -1,8 +1,9 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { TwilioLogo } from "../Icons";
+import { TwilioLogo } from "../../Icons";
+import NavbarItem from "./NavbarItem";
 
-export default function Navbar() {
+export default function Header() {
 
   return (
     <Navbar bg="white" expand="md">
@@ -12,7 +13,7 @@ export default function Navbar() {
             className="navbar-logo d-inline-block align-top">
             <TwilioLogo />
           </div>
-          <Link className="navbar-brand" to='/'>Twilio Virtual Phone</Link>
+          <Link className="navbar-brand" to='/'>Twilio React App</Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -21,6 +22,7 @@ export default function Navbar() {
             navbarScroll
           >
             <NavbarItem to="/" title="Home" />
+            <NavbarItem to="/page1" title="Page 1" />
           </Nav>
         </Navbar.Collapse>
       </Container>
